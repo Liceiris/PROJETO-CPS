@@ -215,37 +215,59 @@ w3-hover-text-cyan w3-text-white">
             </div>
         </div>
     </div>
-    <!--docentes-->
-    <div class="w3-padding-64 w3-content w3-" id="docentes">
-        <h2 class="w3-text-cyan">Docentes</h2>  
+   <div class="w3-padding-64 w3-content" id="docentes">
+        <h2 class="w3-text-cyan">Docentes</h2>
         <hr style="width:200px" class="w3-opacity">
-        <img src="IMG/h.png" style="width: 35%" class="w3-opacity w3-hoveropacity-off">
-        <h3 class="w3-text-cyan">Rafael Souza</h3>
-        <h4 class="w3-text-cyan">Resumo profissional</h4>
-        <p>Analista de Segurança da Informação com 8 anos de atuação em empresas do setor 
-            financeiro e de telecomunicações. Especialista em análise de vulnerabilidades 
-            e conformidade com LGPD, implementando medidas de segurança para proteger dados 
-            sensíveis e mitigar riscos.
-        </p>
-        <h4 class="w3-text-cyan">Formação Acadêmica</h4>
-        <p>Bacharel em Sistemas de Informação, Universidade Federal de Pernambuco (UFPE)</p>
-           <p >MBA em Segurança da Informação, Universidade de São Paulo (USP)
-            </p>
+        
+        <div class="w3-content w3-display-container w3-center">
+           
+            <div class="mySlides">
+                <img src="IMG/h.png" style="width: 35%" class="w3-opacity w3-hover-opacity-off">
+                <h3 class="w3-text-cyan">Rafael Souza</h3>
+                <h4 class="w3-text-cyan">Resumo profissional</h4>
+                <p>Analista de Segurança da Informação com 8 anos de atuação em empresas do setor financeiro e de telecomunicações...</p>
+                <h4 class="w3-text-cyan">Formação Acadêmica</h4>
+                <p>Bacharel em Sistemas de Informação, Universidade Federal de Pernambuco (UFPE)</p>
+                <p>MBA em Segurança da Informação, Universidade de São Paulo (USP)</p>
+            </div>
+    
+          
+            <div class="mySlides">
+                <img src="IMG/m.png" style="width: 35%" class="w3-opacity w3-hover-opacity-off">
+                <h3 class="w3-text-cyan">Laura Freitas</h3>
+                <h4 class="w3-text-cyan">Resumo profissional</h4>
+                <p>Desenvolvedora Full Stack com mais de 5 anos de experiência em construção de plataformas web escaláveis...</p>
+                <h4 class="w3-text-cyan">Formação Acadêmica</h4>
+                <p>Bacharel em Ciência da Computação, Universidade de São Paulo (USP)</p>
+                <p>Pós-graduação em Desenvolvimento de Software Ágil, Universidade de Campinas (UNICAMP)</p>
+            </div>
+    
+            
+            <button class="w3-button w3-black w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
+            <button class="w3-button w3-black w3-display-right" onclick="plusDivs(1)">&#10095;</button>
+        </div>
     </div>
     
-    <div class="w3-padding-64 w3-content w3-" id="docentes">
-     <hr style="width:200px" class="w3-opacity">
-     <img src="IMG/m.png" style="width: 35%" class="w3-opacity w3-hoveropacity-off">
-     <h3 class="w3-text-cyan">Laura Freitas</h3>
-     <h4 class="w3-text-cyan">Resumo profissional</h4>
-     <p>Desenvolvedora Full Stack com mais de 5 anos de experiência em construção de 
-        plataformas web escaláveis. Atua no desenvolvimento tanto de front-end 
-        quanto de back-end, com ênfase em aplicações de alta performance para e-commerce e SaaS. 
-        Conhecimentos avançados em JavaScript, Node.js e React.</p>
-        <h4 class="w3-text-cyan">Formação Acadêmica:</h4>
-        <p>Bacharel em Ciência da Computação, Universidade de São Paulo (USP) </p>
-            <p>Pós-graduação em Desenvolvimento de Software Ágil, Universidade de Campinas (UNICAMP)</p>
-     
+    <!-- Script JavaScript -->
+    <script>
+        var slideIndex = 1;
+        showDivs(slideIndex);
+    
+        function plusDivs(n) {
+            showDivs(slideIndex += n);
+        }
+    
+        function showDivs(n) {
+            var i;
+            var slides = document.getElementsByClassName("mySlides");
+            if (n > slides.length) { slideIndex = 1 }
+            if (n < 1) { slideIndex = slides.length }
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";  
+            }
+            slides[slideIndex - 1].style.display = "block";  
+        }
+    </script>
  
 
      <div class="w3-padding-64 w3-content w3-" id="mercado">
